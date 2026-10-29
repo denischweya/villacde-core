@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "villacde-core/hero",
+  "title": "Villa CDE Hero",
+  "category": "design",
+  "icon": "format-video",
+  "description": "Placeholder for the Villa CDE hero section (video + play button land here in a later sub-project).",
+  "textdomain": "villacde-core",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}
