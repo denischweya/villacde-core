@@ -52,7 +52,10 @@ export default function save( { attributes } ) {
 			</div>
 
 			<div className="villacde-reviews-carousel__footer">
-				<span className="villacde-reviews-carousel__count">
+				<span
+					className="villacde-reviews-carousel__count"
+					aria-live="polite"
+				>
 					{ reviews.length ? `1 / ${ reviews.length }` : '' }
 				</span>
 				<div className="villacde-reviews-carousel__nav">

@@ -50,6 +50,7 @@ export default function save( { attributes } ) {
 						id={ `panel-${ i }` }
 						aria-labelledby={ `tab-${ i }` }
 						hidden={ i !== 0 }
+						tabIndex={ 0 }
 						className="villacde-amenity-tabs__panel"
 					>
 						{ ( tab.items || [] ).map( ( item, j ) => (
