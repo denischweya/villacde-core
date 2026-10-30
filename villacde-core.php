@@ -24,7 +24,7 @@ function villacde_core_register_blocks() {
     if ( ! is_dir( $blocks_dir ) ) {
         return;
     }
-    foreach ( glob( $blocks_dir . '/*', GLOB_ONLYDIR ) as $block_dir ) {
+    foreach ( glob( $blocks_dir . '/*', GLOB_ONLYDIR ) ?: array() as $block_dir ) {
         if ( file_exists( $block_dir . '/block.json' ) ) {
             register_block_type( $block_dir );
         }
