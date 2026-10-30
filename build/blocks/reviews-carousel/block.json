@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "villacde-core/reviews-carousel",
+  "title": "Villa CDE Reviews Carousel",
+  "category": "design",
+  "icon": "format-quote",
+  "description": "Single-quote guest review carousel with next/prev navigation and a position counter.",
+  "textdomain": "villacde-core",
+  "supports": {
+    "anchor": true
+  },
+  "attributes": {
+    "reviews": {
+      "type": "array",
+      "default": [
+        {
+          "text": "Six bedrooms meant nobody had to share and every en-suite was spotless, but the thing we still talk about is the chef. We handed over a shopping list on Friday evening and did not think about food again until Sunday night.",
+          "name": "Wanjiru M.",
+          "location": "Nairobi",
+          "date": "September 2026"
+        },
+        {
+          "text": "We booked it for the pool and barely left the water. The children were swimming by nine each morning, and in the evening the staff lit the fire pit without being asked. Longonot turns pink at about half six. Bring a jumper, it gets properly cold after dark.",
+          "name": "Daniel O.",
+          "location": "Nakuru",
+          "date": "August 2026"
+        },
+        {
+          "text": "We held my mother's sixtieth here with fourteen of us. The lawn took a marquee easily, the house manager helped us carry the dining table outside, and the gate staff looked after guests who arrived late. It did not feel like a rental. It felt like a house someone lends you.",
+          "name": "Faith K.",
+          "location": "Nairobi",
+          "date": "July 2026"
+        },
+        {
+          "text": "Two people in a six-bedroom villa is excessive and we would do it again tomorrow. Coffee on the rooftop with Mount Longonot straight ahead, no traffic, no neighbours, nothing to do. We kept the lounge fire going both nights.",
+          "name": "Peter & Alice N.",
+          "location": "Mombasa",
+          "date": "June 2026"
+        },
+        {
+          "text": "Two hours from Westlands, door to gate, tarmac nearly the whole way. Gated estate, a guard at the entrance and parking inside for four cars, so we stopped worrying about the vehicles within ten minutes of arriving.",
+          "name": "Samuel Githinji",
+          "location": "Nairobi",
+          "date": "October 2026"
+        },
+        {
+          "text": "We used the villa as a base for Hell's Gate and a boat ride on the lake, both under twenty minutes away, then came back to the pool each afternoon. The small round pool is lit blue at night and my daughters decided that was the best part of Kenya.",
+          "name": "Rebecca T.",
+          "location": "London, UK",
+          "date": "August 2026"
+        }
+      ]
+    }
+  },
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "style": "file:./style-index.css"
+}
