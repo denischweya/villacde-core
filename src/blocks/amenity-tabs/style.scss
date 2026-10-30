@@ -1,0 +1,117 @@
+/**
+ * Ported 1:1 from the static site's css/styles.css:
+ *  - lines 39-51 (`.tab`, `.tab:hover`, `.tab[aria-selected="true"]`)
+ *  - lines 467-471 (the `max-width: 767px` amenities/tab overrides)
+ *  - line 202 (`prefers-reduced-motion`: no tab transition)
+ * plus the panel grid / item styling inlined in index.html's
+ * `#panel-*` / item markup. Colours are hardcoded to match the static
+ * site exactly, same precedent as the hero block's style.scss.
+ */
+
+.wp-block-villacde-core-amenity-tabs {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.villacde-amenity-tabs__tablist {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.villacde-amenity-tabs__tab {
+	padding: 12px 20px;
+	border-radius: 999px;
+	border: 1px solid #3a4a63;
+	background: transparent;
+	color: #ffffff;
+	font: inherit;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+	&:hover {
+		border-color: #f2a65a;
+	}
+
+	&[aria-selected='true'] {
+		background: #f2a65a;
+		border-color: #f2a65a;
+		color: #0e1726;
+		font-weight: 700;
+	}
+
+	@media ( prefers-reduced-motion: reduce ) {
+		transition: none;
+	}
+}
+
+.villacde-amenity-tabs__panel {
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax( 240px, 1fr ) );
+	gap: 0 40px;
+	align-content: start;
+
+	/* An author `display` rule otherwise beats the `[hidden]` UA style
+	   regardless of specificity (same fix as the hero block's video-tour
+	   modal) — without this, every panel would render simultaneously
+	   instead of only the selected tab's. */
+	&[hidden] {
+		display: none;
+	}
+}
+
+.villacde-amenity-tabs__item {
+	padding: 24px 0;
+	border-top: 1px solid #24324a;
+	display: flex;
+	gap: 18px;
+}
+
+.villacde-amenity-tabs__num {
+	flex-shrink: 0;
+	font-family: 'Bricolage Grotesque', sans-serif;
+	color: #f2a65a;
+	font-weight: 600;
+	font-size: 18px;
+	font-variant-numeric: tabular-nums;
+}
+
+.villacde-amenity-tabs__item-title {
+	font-family: 'Bricolage Grotesque', sans-serif;
+	font-weight: 600;
+	font-size: 22px;
+	letter-spacing: -0.01em;
+}
+
+.villacde-amenity-tabs__item-desc {
+	margin-top: 6px;
+	font-size: 15px;
+	color: #c3ccd6;
+}
+
+@media ( max-width: 767px ) {
+	.villacde-amenity-tabs__tablist {
+		gap: 8px;
+	}
+
+	.villacde-amenity-tabs__tab {
+		min-height: 44px;
+		padding: 11px 15px;
+		font-size: 14px;
+	}
+
+	.villacde-amenity-tabs__panel {
+		grid-template-columns: 1fr;
+	}
+
+	.villacde-amenity-tabs__item {
+		padding: 18px 0;
+		gap: 14px;
+	}
+
+	.villacde-amenity-tabs__item-title {
+		font-size: 19px;
+	}
+}

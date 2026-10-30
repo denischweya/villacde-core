@@ -1,0 +1,89 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "villacde-core/amenity-tabs",
+	"title": "Villa CDE Amenity Tabs",
+	"category": "design",
+	"icon": "list-view",
+	"description": "WAI-ARIA tabbed panel of amenity categories, with click and arrow-key tab switching.",
+	"textdomain": "villacde-core",
+	"supports": {
+		"anchor": true
+	},
+	"attributes": {
+		"tabs": {
+			"type": "array",
+			"default": [
+				{
+					"id": "outdoors",
+					"label": "Outdoors",
+					"items": [
+						{
+							"title": "Private swimming pool",
+							"description": "Sun loungers, a shade sail and a second circular pool, lit at night."
+						},
+						{
+							"title": "Fire pit",
+							"description": "Gather round as the evening sky comes alive over the Rift Valley."
+						},
+						{
+							"title": "Rooftop terrace",
+							"description": "Lounge seating on a green roof with views to Mount Longonot."
+						},
+						{
+							"title": "Half-acre grounds",
+							"description": "Lawns and gardens with room for games, events and kids to run."
+						}
+					]
+				},
+				{
+					"id": "indoors",
+					"label": "Indoors",
+					"items": [
+						{
+							"title": "Lounge with fireplace",
+							"description": "Recliner sofas, smart TV and a film library for cool nights."
+						},
+						{
+							"title": "Fully equipped kitchen",
+							"description": "Built-in oven, gas hob, fridge, full glassware and crockery."
+						},
+						{
+							"title": "Indoor and outdoor dining",
+							"description": "A long dining table inside and a teak table on the terrace."
+						},
+						{
+							"title": "Games and films",
+							"description": "Board games for the family and a shelf of DVDs."
+						}
+					]
+				},
+				{
+					"id": "service-security",
+					"label": "Service and security",
+					"items": [
+						{
+							"title": "Private chef",
+							"description": "A chef comes with the villa to cook for your group."
+						},
+						{
+							"title": "House manager",
+							"description": "On hand throughout your stay to keep everything running."
+						},
+						{
+							"title": "24/7 security",
+							"description": "On-site security staff, day and night."
+						},
+						{
+							"title": "Gated estate",
+							"description": "Controlled entry, security patrols and private parking."
+						}
+					]
+				}
+			]
+		}
+	},
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
+	"style": "file:./style-index.css"
+}
