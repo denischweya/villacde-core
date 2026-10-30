@@ -5,8 +5,29 @@
   "title": "Villa CDE Hero",
   "category": "design",
   "icon": "format-video",
-  "description": "Placeholder for the Villa CDE hero section (video + play button land here in a later sub-project).",
+  "description": "Full-bleed autoplaying hero video with a pulsing play button that opens the full video tour in a modal.",
   "textdomain": "villacde-core",
+  "supports": {
+    "anchor": true,
+    "align": [ "full" ]
+  },
+  "attributes": {
+    "heroVideoId": { "type": "number" },
+    "heroVideoUrl": { "type": "string", "default": "" },
+    "heroVideoWebmUrl": { "type": "string", "default": "" },
+    "heroVideoMobileUrl": { "type": "string", "default": "" },
+    "heroPosterId": { "type": "number" },
+    "heroPosterUrl": { "type": "string", "default": "" },
+    "tourVideoId": { "type": "number" },
+    "tourVideoUrl": { "type": "string", "default": "" },
+    "eyebrowText": { "type": "string", "default": "Welcome to the Private Escape" },
+    "heading": { "type": "string", "default": "Villa CDE" },
+    "leadText": { "type": "string", "default": "Six en-suite bedrooms, a private pool and the whole house to yourselves. Moi South Lake Road, Naivasha." },
+    "ctaText": { "type": "string", "default": "Check availability" },
+    "ctaHref": { "type": "string", "default": "#book" },
+    "playButtonLabel": { "type": "string", "default": "Watch the full video tour" }
+  },
   "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
   "style": "file:./style-index.css"
 }

@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "wp-scripts build blocks/hero/index=src/blocks/hero/index.js --output-path=build",
-    "start": "wp-scripts start blocks/hero/index=src/blocks/hero/index.js --output-path=build"
+    "build": "wp-scripts build blocks/hero/index=src/blocks/hero/index.js blocks/hero/view=src/blocks/hero/view.js --output-path=build",
+    "start": "wp-scripts start blocks/hero/index=src/blocks/hero/index.js blocks/hero/view=src/blocks/hero/view.js --output-path=build"
   },
   "devDependencies": {
     "@wordpress/scripts": "^30.0.0"
