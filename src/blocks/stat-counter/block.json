@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "villacde-core/stat-counter",
+	"title": "Villa CDE Stat Counter",
+	"category": "design",
+	"icon": "chart-bar",
+	"description": "A single stat that counts up from 0 to a target number, once, when scrolled into view.",
+	"textdomain": "villacde-core",
+	"supports": {
+		"anchor": true
+	},
+	"attributes": {
+		"targetNumber": { "type": "number", "default": 0 },
+		"suffix": { "type": "string", "default": "" },
+		"label": { "type": "string", "default": "" }
+	},
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
+	"style": "file:./style-index.css"
+}

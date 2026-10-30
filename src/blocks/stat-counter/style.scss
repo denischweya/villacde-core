@@ -1,0 +1,35 @@
+/**
+ * Ported 1:1 from the static site's index.html inline styles for a
+ * single stat in the `#stats` bar (lines ~89-92): 46px Bricolage
+ * Grotesque number with tabular-nums (so digits don't shift width
+ * while the count-up animates), and an 8px-margin, 14px/#4A5566/500
+ * label underneath. Colours are hardcoded to match the static site
+ * exactly, same precedent as the hero/amenity-tabs/reviews-carousel
+ * blocks' style.scss.
+ *
+ * The outer grid/card chrome (white background, border-radius, shadow,
+ * the border-right dividers between stats) stays on the `wp:group` /
+ * `wp:columns` / `wp:column` wrapper in patterns/hero.php, same as
+ * before this block existed — this block only owns the number + label.
+ */
+
+.wp-block-villacde-core-stat-counter {
+	text-align: center;
+}
+
+.villacde-stat-counter__number {
+	margin: 0;
+	font-family: 'Bricolage Grotesque', sans-serif;
+	font-size: 46px;
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: -0.03em;
+	font-variant-numeric: tabular-nums;
+}
+
+.villacde-stat-counter__label {
+	margin: 8px 0 0;
+	font-size: 14px;
+	color: #4a5566;
+	font-weight: 500;
+}
